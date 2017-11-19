@@ -1,13 +1,23 @@
 public class Programm {
     public static void main(String[] args) {
 
-        int neuerGeldwert = 41;
 
-        Geldstueck geld = new Geldstueck(neuerGeldwert);
 
-        System.out.println(
-               String.format("%5.2f €", 41/100f)
-        );
+        Geldstueck geld = new Geldstueck(861);
+
+        System.out.println(geld);
+
+        System.out.println("\n\nGelszählmaschine");
+
+        Geldzaehlmaschine gzm = new Geldzaehlmaschine();
+        System.out.println(gzm);
+        gzm.zaehlen(new Geldstueck(23424));
+        System.out.println(gzm);
+        gzm.zaehlen(new Geldstueck(6540));
+        System.out.println(gzm);
+        gzm.reset();
+        System.out.println("Reset: " +gzm);
+
 
     }
 }
